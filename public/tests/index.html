@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2em;
+            }
+
+            body > ul > li {
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: 3em;
+            }
+
+            ul {
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="Tests\Functional\Auth\LoginTest">s\Functional\Auth\Login</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ A user can obtain a jwt token after log in</li>
+        </ul>
+        <h2 id="Tests\Functional\Auth\ManageUserTest">s\Functional\Auth\ManageUser</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Returns a user that is the current user</li>
+            <li style="color: #ef2929;">❌ Unauthenticated requests may not get user data</li>
+            <li style="color: #ef2929;">❌ An authenticated user can update his details</li>
+        </ul>
+        <h2 id="Tests\Functional\Auth\RegisterUsersTest">s\Functional\Auth\RegisterUsers</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ It creates new user when provided with all required parameters</li>
+            <li style="color: #ef2929;">❌ Registration requires a user name</li>
+            <li style="color: #ef2929;">❌ Registration requires a valid email</li>
+        </ul>
+        <h2 id="Tests\Functional\Bugs\CreateBugTest">s\Functional\Bugs\CreateBug</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Un authenticated user may post new bug</li>
+            <li style="color: #ef2929;">❌ Un unauthenticated may not post bugs</li>
+            <li style="color: #ef2929;">❌ Create bug require title</li>
+            <li style="color: #ef2929;">❌ Create bug require description</li>
+            <li style="color: #ef2929;">❌ Create bug require body</li>
+            <li style="color: #ef2929;">❌ User can add tags when creating bugs</li>
+            <li style="color: #ef2929;">❌ Creating new bugs does not duplicate slugs</li>
+        </ul>
+        <h2 id="Tests\Functional\Bugs\DeleteBugTest">s\Functional\Bugs\DeleteBug</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user may delete a bug</li>
+            <li style="color: #ef2929;">❌ Unauthenticated users may not send request to delete bugs</li>
+            <li style="color: #ef2929;">❌ Only the owner of the bug can delete the bug</li>
+        </ul>
+        <h2 id="Tests\Functional\Comments\FavouriteTest">s\Functional\Comments\Favourite</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user may favourite a bug</li>
+            <li style="color: #ef2929;">❌ Unauthenticated may not favourite bugs</li>
+            <li style="color: #ef2929;">❌ An authenticated user may unfavourite a bug</li>
+            <li style="color: #ef2929;">❌ Unauthenticated users may not send request to unfavourite bugs</li>
+        </ul>
+        <h2 id="Tests\Functional\Bugs\ListBugsTest">s\Functional\Bugs\ListBugs</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Returns all bugs</li>
+        </ul>
+        <h2 id="Tests\Functional\Bugs\ShowSingleBugTest">s\Functional\Bugs\ShowSingleBug</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ It return a single bug</li>
+            <li style="color: #ef2929;">❌ It return the correct author following status</li>
+        </ul>
+        <h2 id="Tests\Functional\Bugs\UpdateBugTest">s\Functional\Bugs\UpdateBug</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user may update a bug</li>
+            <li style="color: #ef2929;">❌ Unauthenticated users may not send request to update bugs</li>
+            <li style="color: #ef2929;">❌ Only the owner of the bug can update the bug</li>
+        </ul>
+        <h2 id="Tests\Functional\Comments\AddCommentTest">s\Functional\Comments\AddComment</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user may comment on a bug</li>
+            <li style="color: #ef2929;">❌ Un unauthenticated may not post new comment</li>
+        </ul>
+        <h2 id="Tests\Functional\Comments\DeleteCommentTest">s\Functional\Comments\DeleteComment</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user may delete his comment</li>
+            <li style="color: #ef2929;">❌ Unauthenticated users may not send request to delete comments</li>
+            <li style="color: #ef2929;">❌ Only the owner of the comment can delete the comment</li>
+        </ul>
+        <h2 id="Tests\Functional\Comments\GetCommentTest">s\Functional\Comments\GetComment</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Get comment returns all comments for a bug</li>
+            <li style="color: #ef2929;">❌ Get comments returns comments with optional authentication and includes correct following status</li>
+            <li style="color: #ef2929;">❌ Get comment returns 401 when an invalid token is attached</li>
+        </ul>
+        <h2 id="Tests\Functional\HomepageTest">s\Functional\Homepage</h2>
+        <ul>
+            <li style="color: #555753;">✓ Get homepage without name</li>
+            <li style="color: #555753;">✓ Get homepage with greeting</li>
+            <li style="color: #555753;">✓ Post homepage not allowed</li>
+        </ul>
+        <h2 id="Tests\Profile\FollowUserTest">s\Profile\FollowUser</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ An authenticated user can post a request to follow another user</li>
+            <li style="color: #ef2929;">❌ An authenticated user can follow another user</li>
+            <li style="color: #ef2929;">❌ An unauthenticated users can not post follow request</li>
+            <li style="color: #ef2929;">❌ An unauthenticated users can not send unfollow request</li>
+            <li style="color: #ef2929;">❌ An unauthenticated users can send unfollow request</li>
+        </ul>
+        <h2 id="Tests\Profile\ProfileTest">s\Profile\Profile</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Get profile returns profile without authentication</li>
+            <li style="color: #ef2929;">❌ Get profile returns profile with optional authentication</li>
+            <li style="color: #ef2929;">❌ Get profile returns 401 when an invalid token is attached</li>
+            <li style="color: #ef2929;">❌ Get profile returns correct following status</li>
+            <li style="color: #ef2929;">❌ It returns 404 status code when profile is not found</li>
+        </ul>
+        <h2 id="Tests\Functional\Comments\GetAllTagsTest">s\Functional\Comments\GetAllTags</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ It return all tags</li>
+        </ul>
+        <h2 id="Tests\Unit\Models\BugTest">s\Unit\Models\Bug</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ A bug can have many tags</li>
+            <li style="color: #ef2929;">❌ A bug may have many comments</li>
+            <li style="color: #ef2929;">❌ A bug has an author</li>
+            <li style="color: #ef2929;">❌ It can be favourited by users</li>
+        </ul>
+        <h2 id="Tests\Unit\Models\CommentTest">s\Unit\Models\Comment</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ A comment belongs to a bug</li>
+            <li style="color: #ef2929;">❌ A comment belongs to a user</li>
+        </ul>
+        <h2 id="Tests\Unit\Models\TagTest">s\Unit\Models\Tag</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ A tag can have many bugs</li>
+            <li style="color: #ef2929;">❌ A tag belongs to user</li>
+        </ul>
+        <h2 id="Tests\Unit\Models\UserTest">s\Unit\Models\User</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ A user can have many comments</li>
+            <li style="color: #ef2929;">❌ A user can have many following users</li>
+            <li style="color: #ef2929;">❌ A user can follow another user</li>
+            <li style="color: #ef2929;">❌ A user can tell if it follows another user</li>
+            <li style="color: #ef2929;">❌ A user can unfollow followed user</li>
+            <li style="color: #ef2929;">❌ A user can not follow another user twice</li>
+            <li style="color: #ef2929;">❌ It has favourite bugs relationship</li>
+            <li style="color: #ef2929;">❌ It return default image profile when user does not have an image</li>
+        </ul>
+    </body>
+</html>
